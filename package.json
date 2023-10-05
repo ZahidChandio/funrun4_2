@@ -1,0 +1,27 @@
+{
+  "name": "funrun4",
+  "version": "0.0.0",
+  "private": true,
+  "main": "/app.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "node start.js",
+    "dev": "nodemon ./bin/www -e js,ejs,html,css"
+  },
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "sequelize": "^6.33.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

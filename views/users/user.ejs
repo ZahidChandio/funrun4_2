@@ -1,0 +1,21 @@
+<%- include('../header.ejs') -%>
+
+<h1><%= user_details.first_name %> <%= user_details.last_name %></h1>
+<p><b>Email: </b><%= user_details.email %></p>
+<p><b>Gender: </b><%= user_details.gender %></p>
+
+<!-- Display associated Runs if available -->
+<% if (user_details.runs && user_details.runs.length > 0) { %>
+  <h2>Registered Runs:</h2>
+  <ul>
+    <% user_details.runs.forEach(function(run) { %>
+      <li>
+        <a href="/runs/<%= run.id %>"><%= run.name %></a>
+      </li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p>No registered runs found for this user.</p>
+<% } %>
+
+<%- include('../footer.ejs') -%>

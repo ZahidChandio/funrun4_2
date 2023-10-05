@@ -1,0 +1,8 @@
+<%- include('../header.ejs') -%>
+<h1><%= title %></h1>
+    <ul id="runs">
+        <% runlist.forEach( (run) => { %>
+            <li><a href='/runs/<%= run.id %>'><%= run.name %></a> (<%= run.run_type %>)</li>
+        <% } ) %>
+    </ul>
+    <%- include('../footer.ejs') -%>   
